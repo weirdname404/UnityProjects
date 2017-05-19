@@ -19,7 +19,7 @@ public class FollowCamera : MonoBehaviour {
         transform.position = Vector3.Lerp(transform.position, newPosition, cameraFollowSpeed * Time.deltaTime);
 
         if (ScoreCounter.score >= GameState.fliesToSprint && a) {
-            offset += new Vector3(0f, 1.5f, 0f);
+            offset += new Vector3(0f, 6f, -1f);
             transform.eulerAngles += new Vector3(10f, 0f, 0f);
 
             a = false;
