@@ -40,7 +40,7 @@ public class PlayerMovement: MonoBehaviour {
 
         // Android
         // NOTE: If you want to enable control movement via joystick on Android platform uncomment the line below
-        movement = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"), 0.0f, CrossPlatformInputManager.GetAxis("Vertical"));
+        //movement = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"), 0.0f, CrossPlatformInputManager.GetAxis("Vertical"));
 
         // PC
         // NOTE: Lines below enable control movement via WASD on PC platforms
@@ -49,11 +49,11 @@ public class PlayerMovement: MonoBehaviour {
 
         // ### COMMENT THESE LINES TO CHANGE THE PLATFORM TO MOBILE  
 
-        //// Gather input -1 or 1, to guess in what direction the frog will move
-        //moveHorizontal = Input.GetAxisRaw("Horizontal");
-        //moveVertical = Input.GetAxisRaw("Vertical");
-        //// Combining X and Z
-        //movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        // Gather input -1 or 1, to guess in what direction the frog will move
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+        moveVertical = Input.GetAxisRaw("Vertical");
+        // Combining X and Z
+        movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         // ###################################################################
 
