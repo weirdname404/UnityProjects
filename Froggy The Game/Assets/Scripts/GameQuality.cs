@@ -16,7 +16,7 @@ public class GameQuality : MonoBehaviour {
 		if (QualitySettings.GetQualityLevel () < 1) {
 
 			// ...then disable the water...
-			water.SetActive(false);
+			// water.SetActive(false);
 
 			// ...and disable the dust...
 			dust.SetActive(false);

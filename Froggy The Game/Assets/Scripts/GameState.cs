@@ -120,15 +120,19 @@ public class GameState : MonoBehaviour {
         // if the game is not started and the player presses the spacebar
 
         // NOTE: uncomment the line below in order to make game start on Android platform
-        // if (gameStarted == false && CrossPlatformInputManager.GetButtonUp("Start")) {
+        if (gameStarted == false && CrossPlatformInputManager.GetButtonUp("Start")) 
+        {
+            //...start the game
+            StartGame();
+        }
 
         // NOTE: PC version game state control
-        // NOTE: To change the platform comment the line below
-        if (gameStarted == false && Input.GetKeyUp(KeyCode.Space))
-        { 
-                //...start the game
-                StartGame();
-        }
+        // NOTE: uncomment the line below in order to make game start on PC platform
+        //if (gameStarted == false && Input.GetKeyUp(KeyCode.Space))
+        //{ 
+        //    //...start the game
+        //    StartGame();
+        //}
 
         // if the player is no longer alive 
         else if (playerHealth.alive == false || birdHealth.alive == false) {

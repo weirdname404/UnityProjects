@@ -40,24 +40,22 @@ public class PlayerMovement: MonoBehaviour {
 
         // Android
         // NOTE: If you want to enable control movement via joystick on Android platform uncomment the line below
-        // movement = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"), 0.0f, CrossPlatformInputManager.GetAxis("Vertical"));
+        movement = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"), 0.0f, CrossPlatformInputManager.GetAxis("Vertical"));
 
         // PC
         // NOTE: Lines below enable control movement via WASD on PC platforms
         // NOTE: If you want to change platform to mobile, do not forget to comment lines below
         // NOTE: Do not forget to uncomment line in GameState.cs and change scene in Unity
 
-        // ### COMMENT THESE LINES IF YOU WANT TO CHANGE THE PLATFORM TO MOBILE  from HERE
-        
-        // Gather input -1 or 1, to guess in what direction the frog will move
-        moveHorizontal = Input.GetAxisRaw("Horizontal");
-        moveVertical = Input.GetAxisRaw("Vertical");
+        // ### COMMENT THESE LINES TO CHANGE THE PLATFORM TO MOBILE  
 
-        // Combining X and Z
-        movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        //// Gather input -1 or 1, to guess in what direction the frog will move
+        //moveHorizontal = Input.GetAxisRaw("Horizontal");
+        //moveVertical = Input.GetAxisRaw("Vertical");
+        //// Combining X and Z
+        //movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        // ### COMMENT THESE LINES IF YOU WANT TO CHANGE THE PLATFORM TO MOBILE till HERE
-
+        // ###################################################################
 
         // Activate Super Power
         if (ScoreCounter.score == GameState.fliesToWin && isNotTriggered) {
